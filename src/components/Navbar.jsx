@@ -40,9 +40,6 @@ const Navbar = () => {
           <Link to="/my-bookings">My Bookings</Link>
         </li>
         <li>
-          <Link to="/favourite">Favourite</Link>
-        </li>
-        <li>
           <Link to="/help-center">Help Center</Link>
         </li>
         <li>

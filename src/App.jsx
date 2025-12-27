@@ -6,7 +6,6 @@ import Home from "./components/Home";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Mybookings from "./components/Mybookings";
-import Favourite from "./components/Favourite";
 import HelpCenter from "./components/HelpCenter";
 import AboutUs from "./components/AboutUs";
 import BookNow from "./components/bookNow";
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
   {
     path: "/my-bookings",
     element: <Mybookings />,
-  },
-  {
-    path: "/favourite",
-    element: <Favourite />,
   },
   {
     path: "/help-center",
