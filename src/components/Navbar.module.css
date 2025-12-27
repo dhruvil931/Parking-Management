@@ -1,0 +1,109 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0 3rem;
+  background-color: #0c121a;
+  position: relative;
+}
+
+.navbar_logo img {
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.navbar_list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.navbar_list li:hover {
+  color: rgb(194, 193, 193);
+}
+
+.desktop_login,
+.mobile_login {
+  color: white;
+  cursor: pointer;
+}
+
+/* Show desktop login by default */
+.desktop_login {
+  display: block;
+}
+
+/* Hide mobile login by default */
+.mobile_login {
+  display: none;
+}
+
+/* Menu icon hidden by default (desktop) */
+.menu_icon {
+  display: none;
+}
+
+.menu_icon img {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+/* ------------------- MOBILE VIEW ------------------- */
+@media only screen and (max-width: 834px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  /* Navbar list hidden by default on mobile */
+  .navbar_list {
+    flex-direction: column;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    width: 14rem;
+    padding: 1rem;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  /* Animate menu open */
+  .showMenu {
+    max-height: 20rem;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar_list li {
+    height: 2.5rem;
+  }
+
+  .navbar_list li:hover {
+    color: rgb(194, 193, 193);
+  }
+
+  /* Hide desktop login on mobile */
+  .desktop_login {
+    display: none;
+  }
+
+  /* Show mobile login inside dropdown */
+  .mobile_login {
+    display: block;
+  }
+
+  /* Show menu icon */
+  .menu_icon {
+    display: block;
+  }
+}

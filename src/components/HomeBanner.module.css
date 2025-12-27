@@ -1,0 +1,99 @@
+.bannerImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerWrapper {
+  position: relative;
+  height: 87vh;
+  width: 100%;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.bannerTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 5.5vw;
+  font-weight: bold;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.bannerSubtitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 2vw;
+  opacity: 0.5;
+  margin: 1.25rem 0;
+  text-align: center;
+}
+
+.bannerButton {
+  background: linear-gradient(to top right, #9181f4, #5038ed);
+  width: 11vw;
+  height: 4vw;
+  border-radius: 0.5rem;
+  font-size: 1vw;
+  font-family: "Poppins", sans-serif;
+  margin: 1.25rem 0;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.bannerButton:hover {
+  background: linear-gradient(to top right, #806ef0, #3d21f5);
+}
+
+@media (min-width: 536px) and (max-width: 900px) {
+  .bannerTitle {
+    font-size: 7vw;
+  }
+  .bannerSubtitle {
+    font-size: 2.5vw;
+  }
+  .bannerButton {
+    font-size: 1.4vw;
+    width: 13vw;
+    height: 5vw;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 536px) {
+  .bannerTitle {
+    font-size: 8vw;
+  }
+  .bannerSubtitle {
+    font-size: 3vw;
+  }
+  .bannerButton {
+    font-size: 1.7vw;
+    width: 17vw;
+    height: 7vw;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 400px) {
+  .bannerTitle {
+    font-size: 10vw;
+  }
+  .bannerSubtitle {
+    font-size: 4vw;
+  }
+  .bannerButton {
+    font-size: 2.5vw;
+    width: 25vw;
+    height: 10vw;
+  }
+}
