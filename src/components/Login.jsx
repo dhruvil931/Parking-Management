@@ -4,10 +4,12 @@ import MicrosoftIcon from "../assets/Icons/MicrosoftIcon.png";
 import { Link } from "react-router";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handelSignIn = async () => {
     try {
@@ -23,6 +25,8 @@ function App() {
 
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("userPhoto", res.data.photo || "/defaultUser.png");
+
+      navigate("/");
 
       window.location.href = "/";
     } catch (err) {
