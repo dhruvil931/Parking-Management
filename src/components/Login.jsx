@@ -13,24 +13,15 @@ function App() {
 
   const handelSignIn = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/login", {
+      const response = await axios.post("http://localhost:8080/login", {
         email,
         password,
       });
-
-      if (!res.data || res.data.success !== true) {
-        console.log("Login failed: invalid response");
-        return;
-      }
-
-      localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("userPhoto", res.data.photo || "/defaultUser.png");
-
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
       navigate("/");
-
-      window.location.href = "/";
     } catch (err) {
-      console.log("Login Failed", err.response?.data || err.message);
+      setError(err.response?.data?.message || "Login failed");
     }
   };
 
